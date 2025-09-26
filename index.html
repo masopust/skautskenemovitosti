@@ -104,15 +104,15 @@
             <h3>Podkladové mapy</h3>
             <div class="menu-item">
                 <input type="radio" id="base1" name="basemap" value="base1" checked>
-                <label for="base1">Podkladová mapa 1</label>
+                <label for="base1">OpenStreetMap</label>
             </div>
             <div class="menu-item">
                 <input type="radio" id="base2" name="basemap" value="base2">
-                <label for="base2">Podkladová mapa 2</label>
+                <label for="base2">Základní mapa</label>
             </div>
             <div class="menu-item">
                 <input type="radio" id="base3" name="basemap" value="base3">
-                <label for="base3">Podkladová mapa 3</label>
+                <label for="base3">Ortofoto</label>
             </div>
         </div>
         
@@ -120,7 +120,7 @@
             <h3>Překryvná vrstva</h3>
             <div class="menu-item">
                 <input type="checkbox" id="overlay" checked>
-                <label for="overlay">WMTS překryvná vrstva</label>
+                <label for="overlay">Katastrální mapa</label>
             </div>
         </div>
         
@@ -153,9 +153,9 @@
         // Konfigurace URL - zde doplňte své skutečné URL
         const config = {
             baseMaps: {
-                base1: 'https://ags.cuzk.gov.cz/arcgis1/rest/services/ZTM_WM/MapServer/WMTS/tile/1.0.0/ZTM_WM/default/GoogleMapsCompatible/{z}/{y}/{x}', // Nahraďte skutečným URL
-                base2: 'https://ags.cuzk.gov.cz/arcgis1/rest/services/ORTOFOTO_WM/MapServer/WMTS/tile/1.0.0/ORTOFOTO_WM/default/GoogleMapsCompatible/{z}/{y}/{x}', // Nahraďte skutečným URL
-                base3: 'https://tile.openstreetmap.org/{z}/{y}/{x}.png'  // Nahraďte skutečným URL
+                base1: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png'  // Nahraďte skutečným URL
+                base2: 'https://ags.cuzk.gov.cz/arcgis1/rest/services/ORTOFOTO_WM/MapServer/WMTS/tile/1.0.0/ORTOFOTO_WM/default/GoogleMapsCompatible/{z}/{y}/{x}', // Nahraďte skutečným URL               
+                base3: 'https://ags.cuzk.gov.cz/arcgis1/rest/services/ZTM_WM/MapServer/WMTS/tile/1.0.0/ZTM_WM/default/GoogleMapsCompatible/{z}/{y}/{x}', // Nahraďte skutečným URL
             },
             overlayMap: 'https://services.cuzk.cz/wms/local-km-wms.asp?bbox={bbox-epsg-3857}&format=image/png&service=WMS&version=1.1.1&request=GetMap&srs=EPSG:3857&transparent=true&width=256&height=256&layers=hranice_parcel,parcelni_cisla,RST_PK,RST_KMD', // Nahraďte skutečným URL
             geojsonLayers: {
